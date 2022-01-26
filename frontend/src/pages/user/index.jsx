@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
-export default function index() {
+export default function Dashboard() {
+  useEffect(() => {
+    axios.get("http://locahost:3001/user/profil");
+  }, []);
+
   return (
     <div className="main bg-dark">
       <div className="header">
-        <h1>
+        <h1 className="account-welcome">
           Welcome back
           <br />
           Tony Jarvis!

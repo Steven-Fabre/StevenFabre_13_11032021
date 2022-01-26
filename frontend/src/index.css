@@ -228,6 +228,11 @@ body {
   margin-bottom: 2rem;
 }
 
+.account-welcome {
+  padding: 15px;
+  margin: 0;
+}
+
 .account-amount {
   margin: 0;
   font-size: 2.5rem;

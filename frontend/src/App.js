@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Main from "./components/main";
-import Signin from "./components/signin";
-import User from "./components/user";
+import Main from "./pages/main";
+import Signin from "./pages/signin";
+import User from "./pages/user";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
