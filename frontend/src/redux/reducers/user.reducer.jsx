@@ -18,7 +18,7 @@ export default function userReducer(state = initialState, action) {
     case UPDATE_USER:
       return {
         ...state,
-        data: { ...state.data, firstname: action.payload.firstname, lastName: action.payload.lastName },
+        data: { ...state.data, firstName: action.payload.firstName, lastName: action.payload.lastName },
       };
 
     case LOGOUT:

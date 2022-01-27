@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
 import Signin from "./pages/signin";
 import User from "./pages/user";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Error from "./components/error";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Error from "./components/Error";
 
 export default function App() {
   return (

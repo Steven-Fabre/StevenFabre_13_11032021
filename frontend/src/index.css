@@ -15,10 +15,11 @@ body {
 
 .main {
   flex: 1;
+  padding: 2em 0;
 }
 
 .bg-dark {
-  background-color: #12002b;
+  background-color: #e0e6ed;
 }
 
 .sr-only {
@@ -53,7 +54,7 @@ body {
 
 .main-nav-item {
   text-decoration: none;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .main-nav-item:hover {
@@ -159,8 +160,8 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
-  background-color: #00bc77;
+  border-color: #6458f5;
+  background-color: #6458f5;
   color: #fff;
 }
 
@@ -217,7 +218,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   background-color: #fff;
   width: 80%;
   margin: 0 auto;
@@ -229,6 +230,7 @@ body {
 }
 
 .account-welcome {
+  color: black;
   padding: 15px;
   margin: 0;
 }
@@ -256,9 +258,10 @@ body {
 }
 
 .edit-button {
-  border-color: #00bc77;
-  background-color: #00bc77;
-  color: #fff;
+  border-color: #6458f5;
+  background-color: white;
+  border-radius: 5px;
+  color: #6458f5;
   font-weight: bold;
   padding: 10px;
 }
@@ -275,8 +278,9 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
-  background-color: #00bc77;
+  border-color: #6458f5;
+  background-color: #6458f5;
+  border-radius: 5px;
   color: #fff;
 }
 
@@ -311,4 +315,63 @@ body {
 .error-code,
 .error-link {
   font-size: 2em;
+}
+
+.signout::after {
+  content: "";
+}
+
+i {
+  font-size: 1.2em;
+  margin: 3px;
+  color: grey;
+}
+
+@media (min-width: 720px) {
+  .signout::after {
+    content: "Sign out";
+  }
+}
+
+.user-welcome {
+  color: black;
+  margin: 0 0 20px 0;
+}
+
+.names-edit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.name-edit {
+  display: block;
+  width: 300px;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem;
+  border-color: #e0e6ed;
+}
+
+.name-edit::placeholder {
+  color: #e0e6ed;
+}
+
+.buttons-edit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.button-edit {
+  display: block;
+  width: 150px;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem;
+  border-color: #8378f3;
+  background-color: white;
+  color: #8378f3;
 }

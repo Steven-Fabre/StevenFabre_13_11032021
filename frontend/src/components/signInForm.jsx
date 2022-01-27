@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getToken } from "../redux/actions/user.actions";
-import { loadFromLocalStorage } from "../services/localStorage";
 
 export default function SignInForm() {
   const [email, setEmail] = useState();
@@ -25,7 +24,11 @@ export default function SignInForm() {
 
     email && password && dispatch(getToken(email, password, isRemember));
 
-    userError.innerHTML = "Incorrect Username or Password";
+    userError.innerHTML = "Loading...";
+    setTimeout(() => {
+      userError.innerHTML = "Incorrect Username or Password";
+      return clearTimeout();
+    }, 1000);
   };
 
   const handleOnChange = () => {
