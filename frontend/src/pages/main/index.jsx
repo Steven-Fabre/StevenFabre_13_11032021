@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import { loadFromLocalStorage } from "../../services/localStorage";
+
 export default function Main() {
   return (
     <div>

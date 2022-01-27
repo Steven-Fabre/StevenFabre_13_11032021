@@ -5,6 +5,7 @@ import Signin from "./pages/signin";
 import User from "./pages/user";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Error from "./components/error";
 
 export default function App() {
   return (
@@ -12,9 +13,10 @@ export default function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/sign-in" element={<Signin />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/" element={<Main />} />
+          <Route path="/sign-in" exact element={<Signin />} />
+          <Route path="/user" exact element={<User />} />
+          <Route path="/" exact element={<Main />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </div>

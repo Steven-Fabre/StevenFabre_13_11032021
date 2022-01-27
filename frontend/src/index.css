@@ -293,3 +293,22 @@ body {
     width: 200px;
   }
 }
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 80%;
+  height: 70vh;
+}
+
+.error-text {
+  font-size: 1.7em;
+}
+
+.error-code,
+.error-link {
+  font-size: 2em;
+}

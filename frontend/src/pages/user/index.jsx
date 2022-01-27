@@ -1,10 +1,24 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { saveToLocalStorage } from "../../services/localStorage";
 
 export default function Dashboard() {
-  useEffect(() => {
-    axios.get("http://locahost:3001/user/profil");
-  }, []);
+  const userData = useSelector((state) => state.userReducer);
+
+  if (userData.isRemember === true) {
+    saveToLocalStorage({ userReducer: { ...userData } });
+  }
+
+  if (!userData.isLogged)
+    return (
+      <section className="error">
+        <h1 className="account-welcome">Please Login</h1>
+        <Link className="error-link" to="/sign-in">
+          Go to Sign-in page
+        </Link>
+      </section>
+    );
 
   return (
     <div className="main bg-dark">

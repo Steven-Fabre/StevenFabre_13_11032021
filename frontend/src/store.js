@@ -1,22 +1,9 @@
-import { createStore } from "redux";
-import produce from "immer";
+import { applyMiddleware, createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import combineReducer from "./redux/reducers";
+import { loadFromLocalStorage } from "./services/localStorage";
 
-const initialState = {
-  isLogged: false,
-  token: "",
-  data: {},
-};
+const store = createStore(combineReducer, loadFromLocalStorage(), composeWithDevTools(applyMiddleware(thunk)));
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "first":
-      return { ...state, ...action };
-
-    default:
-      return state;
-  }
-};
-
-export const store = createStore(reducer, initialState);
-
-store.subscribe(() => {});
+export default store;
