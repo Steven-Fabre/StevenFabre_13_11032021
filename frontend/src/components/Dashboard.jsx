@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Transactions from "./Transactions";
@@ -12,6 +12,11 @@ export default function Dashboard() {
   const dispatch = useDispatch();
 
   const userData = useSelector((state) => state.userReducer);
+
+  useEffect(() => {
+    setNewFirstName(userData.data.firstName);
+    setNewLastName(userData.data.lastName);
+  }, []);
 
   const handleUpdate = () => {
     dispatch(updateUser(userData.token, newFirstName, newLastName));
