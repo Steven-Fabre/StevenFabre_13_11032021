@@ -346,7 +346,7 @@ i {
 
 .name-edit {
   display: block;
-  width: 300px;
+  width: 40%;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -374,4 +374,10 @@ i {
   border-color: #8378f3;
   background-color: white;
   color: #8378f3;
+}
+
+@media (min-width: 720px) {
+  .name-edit {
+    width: 300px;
+  }
 }
