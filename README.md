@@ -27,7 +27,7 @@ The yarn or npm command will allow you to install the dependencies.
 
 ### Executing program
 
-First launch the backend side of the project following the OpenClassRooms's insctructions on the local port 3001
+First launch the backend side of the project following the OpenClassRooms's instructions on the local port 3001
 Then jump to your Front End folder and run
 
 ### `yarn start`
