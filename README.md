@@ -10,10 +10,10 @@ The project n°13 of the OpenClassRooms Front End's course
 
 ### Dependencies
 
-* IDE : I recommend to use VSCode
+* IDE : I recommend VSCode
 * NodeJS (version 12.18)
-* NPM or Yarn : I recommend to use Yarn
-If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
+* NPM or Yarn : I recommend Yarn
+* If you are working with several versions of NodeJS, I recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
 
 ### Installing
 
